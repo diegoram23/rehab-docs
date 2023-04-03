@@ -1,17 +1,16 @@
 import { useNavigate } from "react-router-dom";
 
 import { db } from "../firebase/config";
-import { doc, deleteDoc } from "firebase/firestore";
+import { doc, deleteDoc} from "firebase/firestore";
 
 const PatientList = ({ patients }) => {
     const navigate= useNavigate()
 
     const handleClick = async (id) => {
-        console.log(id)
         const docRef = doc(db, 'patients', id)
         await deleteDoc(docRef)
     }
-
+console.log(patients)
     return (
         <main className="patients-container">
             {patients.map(patient =>

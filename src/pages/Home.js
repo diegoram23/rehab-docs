@@ -9,8 +9,7 @@ const Home = () => {
 
     return (
         <div>
-
-        {patients && <PatientList patients={patients}/>}
+            {patients && <PatientList patients={patients} />}
         </div>
     );
 }

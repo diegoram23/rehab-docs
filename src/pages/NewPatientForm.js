@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router";
 
 import { db } from "../firebase/config";
-import { collection, addDoc } from 'firebase/firestore'
+import { collection, addDoc} from 'firebase/firestore'
 
 const NewPatientForm = () => {
     const navigate = useNavigate()
