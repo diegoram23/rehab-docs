@@ -33,7 +33,7 @@ const NewPatientForm = () => {
     return (
         <div className="patient-form">
 
-            <h2>Add a new patient</h2>
+            <h2>Patient information</h2>
 
             <form onSubmit={handleSubmit}>
                 <label>
@@ -75,8 +75,8 @@ const NewPatientForm = () => {
                         onChange={(e) => setDiagnosis(e.target.value)}
                     />
                 </label>
-                {!isPending && <button>Add patient</button>}
-                {isPending && <button disabled>Adding patient...</button>}
+                {!isPending && <button className="patient-form-btn">Add patient</button>}
+                {isPending && <button className="patient-form-btn" disabled>Adding patient...</button>}
                 <p>{first} {last} {DOB} {Diagnosis}</p>
             </form>
         </div>

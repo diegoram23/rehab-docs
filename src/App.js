@@ -2,6 +2,7 @@ import { HashRouter, Routes, Route } from 'react-router-dom'
 import HeaderLayout from './layouts/HeaderLayout';
 import Home from './pages/Home';
 import NewPatientForm from './pages/NewPatientForm';
+import PatientDetails from './pages/PatientDetails';
 
 
 function App() {
@@ -11,7 +12,8 @@ function App() {
         <Routes>
           <Route path='/' element={<HeaderLayout />}>
             <Route index element={<Home />} />
-            <Route path='/newpatient' element={<NewPatientForm />}/>
+            <Route path='/newPatient' element={<NewPatientForm />}/>
+            <Route path='/patient/:id' element={<PatientDetails />}/>
           </Route>
         </Routes>
       </HashRouter>

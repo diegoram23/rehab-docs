@@ -7,7 +7,7 @@ const HeaderLayout = () => {
                 <h1>Rehab<span>Docs</span></h1>
                 <nav className="nav-links">
                     <NavLink to="/">Home</NavLink>
-                    <NavLink to="/newpatient">New Patient</NavLink>
+                    <NavLink to="/newPatient">New Patient</NavLink>
                 </nav>
             </header>
             <Outlet />

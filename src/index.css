@@ -44,6 +44,10 @@ nav a.active {
   padding: 5px 8px;
 }
 
+h2 {
+  margin: 0;
+}
+
 .patients-container {
   margin-top: 1em;
 }
