@@ -1,8 +1,53 @@
 body {
   max-width: 400px;
   margin: 0;
+  color: rgb(97, 93, 93);
+
 }
 
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #ddd;
+  padding: 1em 0.2em;
+}
+
+header span {
+  color: rgb(97, 93, 93);
+}
+
+header h1 {
+  margin: 0 0 0 0.3em;
+  color: #f1356d;
+  font-size: 30px;
+}
+
+nav a{
+  text-decoration: none;
+  margin-right: 0.4em;
+  color: rgb(97, 93, 93);
+  font-size: 18px;
+  font-weight: bold;
+}
+
+nav a.active {
+  color: #ffffff;
+  background-color: #f1356d;
+  border-radius: 8px;
+  padding: 5px 8px;
+}
+
+.patients-container{
+  border: 1px solid black;
+}
+
+.patients-box{
+  border: 1px solid red
+}
+
+
+/*-------------------New patient form --------------------*/
 .patient-form {
   max-width: 350px;
   margin: 0 auto;
@@ -15,7 +60,7 @@ body {
 }
 
 .patient-form h2{
-  color: #6096b4;
+  color: #f1356d;
 }
 
 .patient-form input, .patient-form select {
@@ -28,11 +73,13 @@ body {
 }
 
 .patient-form button {
-  background-color: #6096b4;
-  color: #ddd;
+  background-color: #f1356d;
+  color: #ffffff;
   border: 0;
   padding: 8px 12px;
   border-radius: 8px;
   cursor: pointer;
   font-size: 15px;
+  font-weight: bold;
+  letter-spacing: 0.02em;
 }

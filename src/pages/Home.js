@@ -1,39 +1,34 @@
+import { useEffect, useState } from "react";
+import { db } from "../firebase/config";
+import { collection, getDocs } from 'firebase/firestore'
+
 const Home = () => {
+    const [patients, setPatients] = useState([])
+
+    useEffect(() => {
+        const ref = collection(db, 'patients')
+
+        getDocs(ref)
+            .then(snapshot => {
+                let results = []
+                snapshot.docs.forEach(doc => {
+                    results.push({ id: doc.id, ...doc.data() })
+                })
+                setPatients(results)
+                console.log(results)
+            })
+    }, [])
+
     return (
-        <div className="patient-form">
-            <h2>Add a new patient</h2>
-            <form>
-                <label>
-                    <span>First name:</span>
-                    <input
-                        required
-                        type='text'
-                    />
-                </label>
-                <label>
-                    <span>Last name:</span>
-                    <input
-                        required
-                        type='text'
-                    />
-                </label>
-                <label>
-                    <span>DOB:</span>
-                    <input
-                        required
-                        type='text'
-                    />
-                </label>
-                <label>
-                    <span>Diagnosis:</span>
-                    <input
-                        required
-                        type='text'
-                    />
-                </label>
-                <button>Add patient</button>
-            </form>
-        </div>
+        <main className="patients-container">
+            {patients.map(patient =>
+                <div className="patients-box" key={patient.id}>
+                    <h3>{patient.Last}, {patient.first}</h3>
+                    <p>{patient.DOB}</p>
+                    <p>{patient.Diagnosis}</p>
+                </div>
+            )}
+        </main>
     );
 }
 
