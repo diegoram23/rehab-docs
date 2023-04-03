@@ -1,7 +1,7 @@
 import { HashRouter, Routes, Route } from 'react-router-dom'
 import HeaderLayout from './layouts/HeaderLayout';
 import Home from './pages/Home';
-import NewPatient from './pages/NewPatient';
+import NewPatientForm from './pages/NewPatientForm';
 
 
 function App() {
@@ -11,7 +11,7 @@ function App() {
         <Routes>
           <Route path='/' element={<HeaderLayout />}>
             <Route index element={<Home />} />
-            <Route path='/newpatient' element={<NewPatient />}/>
+            <Route path='/newpatient' element={<NewPatientForm />}/>
           </Route>
         </Routes>
       </HashRouter>

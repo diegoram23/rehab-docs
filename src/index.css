@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
 body {
   max-width: 400px;
   margin: 0;
   color: #2d2d2d;
-
+  font-family: 'Poppins';
 }
 
 header {
@@ -20,15 +22,14 @@ header span {
 header h1 {
   margin: 0 0 0 0.3em;
   color: #1eae98;
-  font-size: 30px;
+  font-size: 28px;
 }
 
 nav a{
   text-decoration: none;
   margin-right: 0.4em;
   color: #2d2d2d;
-  font-size: 18px;
-  font-weight: bold;
+  font-size: 14px;
 }
 
 nav a.active {
@@ -62,22 +63,20 @@ nav a.active {
 
 .inline {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   margin: 0 0 0.5em 0;
 }
 
-.inline button {
-  background-color: #1eae98;
-  color: #ffffff;
-  border: 0;
-  padding: 8px 12px;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 15px;
-  font-weight: bold;
-  letter-spacing: 0.02em;
+.new-note-btn {
+  margin-left: 0.5em;
   margin-right: 0.5em;
+}
+
+.all-notes-btn {
+  color: #1eae98;
+  background-color: #eeecec;
+  border: 1px solid #ddd;
+  margin-left: auto;
 }
 /*-------------------New patient form --------------------*/
 .patient-form {
@@ -102,9 +101,10 @@ nav a.active {
   border: 1px solid #ddd;
   display: block;
   box-sizing: border-box;
+  border-radius: 6px;
 }
 
- .patient-form button {
+  button {
   background-color: #1eae98;
   color: #ffffff;
   border: 0;
