@@ -23,9 +23,12 @@ const Home = () => {
         <main className="patients-container">
             {patients.map(patient =>
                 <div className="patients-box" key={patient.id}>
-                    <h3>{patient.Last}, {patient.first}</h3>
-                    <p>{patient.DOB}</p>
-                    <p>{patient.Diagnosis}</p>
+                    <h3>{patient.last}, {patient.first}</h3>
+                    <p><strong>DOB: </strong>{patient.DOB}</p>
+                    <div className="inline">
+                        <p><strong>Dx: </strong>{patient.Diagnosis}</p>
+                        <button>New note</button>
+                    </div>
                 </div>
             )}
         </main>

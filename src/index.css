@@ -1,7 +1,7 @@
 body {
   max-width: 400px;
   margin: 0;
-  color: rgb(97, 93, 93);
+  color: #2d2d2d;
 
 }
 
@@ -14,39 +14,71 @@ header {
 }
 
 header span {
-  color: rgb(97, 93, 93);
+  color: #2d2d2d;
 }
 
 header h1 {
   margin: 0 0 0 0.3em;
-  color: #f1356d;
+  color: #1eae98;
   font-size: 30px;
 }
 
 nav a{
   text-decoration: none;
   margin-right: 0.4em;
-  color: rgb(97, 93, 93);
+  color: #2d2d2d;
   font-size: 18px;
   font-weight: bold;
 }
 
 nav a.active {
   color: #ffffff;
-  background-color: #f1356d;
+  background-color: #1eae98;
   border-radius: 8px;
   padding: 5px 8px;
 }
 
 .patients-container{
-  border: 1px solid black;
+  margin-top: 1em;
 }
 
 .patients-box{
-  border: 1px solid red
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin: 0.8em 0.2em;
 }
 
+.patients-box h3 {
+  background-color: rgb(230, 227, 227);
+  color: #1eae98;
+  margin: 0;
+  padding: 0.4em 0.5em;
+}
 
+.patients-box p {
+  margin: 0;
+  padding: 0.3em;
+}
+
+.inline {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 0 0.5em 0;
+}
+
+.inline button {
+  background-color: #1eae98;
+  color: #ffffff;
+  border: 0;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: bold;
+  letter-spacing: 0.02em;
+  margin-right: 0.5em;
+}
 /*-------------------New patient form --------------------*/
 .patient-form {
   max-width: 350px;
@@ -60,7 +92,7 @@ nav a.active {
 }
 
 .patient-form h2{
-  color: #f1356d;
+  color: #1eae98;
 }
 
 .patient-form input, .patient-form select {
@@ -72,8 +104,8 @@ nav a.active {
   box-sizing: border-box;
 }
 
-.patient-form button {
-  background-color: #f1356d;
+ .patient-form button {
+  background-color: #1eae98;
   color: #ffffff;
   border: 0;
   padding: 8px 12px;
