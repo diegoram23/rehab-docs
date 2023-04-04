@@ -2,12 +2,13 @@
 
 body {
   max-width: 400px;
-  margin: 0;
+  margin: 0 auto;
   color: #2d2d2d;
   font-family: 'Poppins';
 }
 
-header, .main-header {
+header,
+.main-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -110,8 +111,11 @@ h3,
   margin: 0 auto;
   text-align: center;
 }
-
-.patient-form label {
+.patient-form-btn {
+  margin-top: 4em;
+  padding: 12px 25px;
+}
+ label {
   text-align: left;
   display: block;
   cursor: pointer;
@@ -119,19 +123,49 @@ h3,
 
 .patient-form h2 {
   color: #1eae98;
+  font-weight: 400;
+  margin: 5px 0;
 }
 
-.patient-form input,
-.patient-form select {
+input,
+textarea {
   width: 90%;
   padding: 6px 10px;
-  margin: 10px 0;
+  margin: 5px 0;
   border: 1px solid #ddd;
   display: block;
   box-sizing: border-box;
   border-radius: 6px;
-  cursor: pointer;
+  cursor: text;
   box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+textarea {
+  height: 100px;
+}
+
+legend {
+  font-size: 20px;
+  color: #2d2d2d;
+}
+
+fieldset  {
+  color: #1eae98;
+  border: 1px solid #1eae98;
+  margin-bottom: 10px;
+}
+fieldset input {
+  width: 30%;
+  display: inline-block;
+  padding: 0;
+  margin-right: 0.5em;
+  margin-bottom: 10px;
+}
+
+fieldset label {
+  display: inline-block;
+  width: 50%;
+  padding: 0;
 }
 
 button {
