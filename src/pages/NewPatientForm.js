@@ -32,16 +32,24 @@ const NewPatientForm = () => {
 
         const ref = collection(db, 'patients')
         //creates new patient and sends values to db
+   
         await addDoc(ref, {
             first: first,
             last: last,
             DOB: DOB,
-            Diagnosis: Diagnosis
+            Diagnosis: Diagnosis,
+            priorLiving: priorLiving,
+            bedMobility: bedMobility,
+            transfers: transfers,
+            ambulation: ambulation,
+            assistiveDevice: assistiveDevice,
+            distance: distance
         })
         setIsPending(false)
         //sends user back to homepage after submit
         navigate('/')
     }
+
 
     return (
         <div className="patient-form">
