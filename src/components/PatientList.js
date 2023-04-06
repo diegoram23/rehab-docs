@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 
+
 const PatientList = ({ patients }) => {
     const navigate = useNavigate()
 
@@ -16,9 +17,9 @@ const PatientList = ({ patients }) => {
                     <div className="inline-btns">
                         <p><strong>Dx: </strong>{patient.Diagnosis}</p>
 
-                        {/*Redirects user to details page of patient chosen */}
+                        {/*Redirects user to details page or new note pageof patient chosen */}
                         <button onClick={() => navigate(`/patient/${patient.id}`)} className="all-notes-btn">History</button>
-                        <button className="new-note-btn">New note</button>
+                        <button onClick={() => navigate(`/newNote/${patient.id}`)} className="new-note-btn">New note</button>
                     </div>
                 </section>
             )}

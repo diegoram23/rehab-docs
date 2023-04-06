@@ -1,123 +1,28 @@
+import { useParams } from "react-router-dom";
 import { useState } from "react";
-import { useNavigate } from "react-router";
 
-import { db } from "../firebase/config";
-import { collection, addDoc } from 'firebase/firestore'
 
-const NewPatientForm = () => {
-    //sends user back to homepage after submit
-    const navigate = useNavigate()
+const NewNote = () => {
+    const { id } = useParams()
 
-    //text input states
-    const [first, setFirst] = useState('')
-    const [last, setLast] = useState('')
-    const [DOB, setDOB] = useState('')
-    const [Diagnosis, setDiagnosis] = useState('')
-    const [priorLiving, setPriorLiving] = useState('')
-
-    //Fieldset states
     const [bedMobility, setBedMobility] = useState('')
     const [transfers, setTransfers] = useState('')
     const [ambulation, setAmbulation] = useState('')
     const [assistiveDevice, setAssistiveDevice] = useState('')
     const [distance, setDistance] = useState('')
 
-    //Prevents multiple submits by temporarily disabling button
-    const [isPending, setIsPending] = useState(false)
-
-
-    const handleSubmit = async (e) => {
+    const handleSubmitNote = (e) => {
         e.preventDefault()
-        setIsPending(true)
-
-        const ref = collection(db, 'patients')
-        //creates new patient and sends values to db
-   
-        await addDoc(ref, {
-            first: first,
-            last: last,
-            DOB: DOB,
-            Diagnosis: Diagnosis,
-            priorLiving: priorLiving,
-            bedMobility: bedMobility,
-            transfers: transfers,
-            ambulation: ambulation,
-            assistiveDevice: assistiveDevice,
-            distance: distance
-        })
-        setIsPending(false)
-        //sends user back to homepage after submit
-        navigate('/')
     }
 
-
+    console.log(id)
     return (
-        <div className="patient-form">
-
-            <h2>Patient information</h2>
-
-            {/*------------------- General patient information inputs --------------------- */}
-
-            <form onSubmit={handleSubmit}>
-
-                <label>
-                    <span>First name:</span>
-                    <input
-                        required
-                        type='text'
-                        placeholder="First name"
-                        value={first}
-                        onChange={(e) => setFirst(e.target.value)}
-                    />
-                </label>
-
-                <label>
-                    <span>Last name:</span>
-                    <input
-                        required
-                        type='text'
-                        placeholder="Last name"
-                        value={last}
-                        onChange={(e) => setLast(e.target.value)}
-                    />
-                </label>
-
-                <label>
-                    <span>DOB:</span>
-                    <input
-                        required
-                        type='date'
-                        value={DOB}
-                        onChange={(e) => setDOB(e.target.value)}
-                    />
-                </label>
-                <label>
-                    <span>Diagnosis:</span>
-                    <input
-                        required
-                        type='text'
-                        placeholder="Diagnosis"
-                        value={Diagnosis}
-                        onChange={(e) => setDiagnosis(e.target.value)}
-                    />
-                </label>
-
-                <label>
-                    <span>Prior living Situation:</span>
-                    <textarea
-                        required
-                        type='text'
-                        placeholder="Prior living situation"
-                        value={priorLiving}
-                        onChange={(e) => setPriorLiving(e.target.value)}
-                    >
-                    </textarea>
-                </label>
-
+        <>
+            <form onSubmit={handleSubmitNote}>
                 {/*-------------- Fieldset for bed mobility ----------------*/}
-
                 <fieldset>
-                    <legend>Bed mobility history</legend>
+                    <legend>Today's bed mobility</legend>
+
                     <input
                         type='radio'
                         id='independent-bm'
@@ -153,13 +58,13 @@ const NewPatientForm = () => {
                         onChange={(e) => setBedMobility(e.target.value)}
                     />
                     <label htmlFor="max-assistance-bm">Max Assistance</label>
-
                 </fieldset>
 
                 {/*------------- Fieldset for transfers ------------------*/}
 
                 <fieldset>
-                    <legend>Transfers history</legend>
+                    <legend>Todays transfers</legend>
+
                     <input
                         type='radio'
                         id='independent-t'
@@ -186,7 +91,6 @@ const NewPatientForm = () => {
                         onChange={(e) => setTransfers(e.target.value)}
                     />
                     <label htmlFor="partial-assistance-t">Partial Assistance</label>
-
                     <input
                         type='radio'
                         id='max-assistance-t'
@@ -201,7 +105,8 @@ const NewPatientForm = () => {
                 {/*-------------- Fielset for ambulation --------*/}
 
                 <fieldset>
-                    <legend>Ambulation history</legend>
+                    <legend>Todays ambulation</legend>
+
                     <input
                         type='radio'
                         id='independent-a'
@@ -237,9 +142,9 @@ const NewPatientForm = () => {
                         onChange={(e) => setAmbulation(e.target.value)}
                     />
                     <label htmlFor="max-assistance-a">Max Assistance</label>
+                    
 
                     {/*------------- Selects for ambulation ----------------------- */}
-
                     <label htmlFor="assistive-device">Assistive Device</label>
                     <select
                         id='assistive-device'
@@ -270,13 +175,9 @@ const NewPatientForm = () => {
                     </select>
 
                 </fieldset>
-
-                {!isPending && <button className="patient-form-btn">Add patient</button>}
-                {isPending && <button className="patient-form-btn" disabled>Adding patient...</button>}
-                <p>{first} {last} {DOB} {Diagnosis}</p>
             </form>
-        </div>
+        </>
     );
 }
 
-export default NewPatientForm;
+export default NewNote;
