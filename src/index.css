@@ -7,6 +7,9 @@ body {
   font-family: 'Poppins';
 }
 
+
+/*-------------------- Header and nav styles -----------------------*/
+
 header,
 .main-header {
   display: flex;
@@ -49,6 +52,9 @@ h2 {
   margin: 0;
 }
 
+
+/*-------------------- Patient list styles -----------------------------*/
+
 .patients-container {
   margin-top: 1em;
 }
@@ -87,7 +93,8 @@ h3,
   padding: 0.3em;
 }
 
-.inline {
+/* sets history and new note buttons inline with Dx on patient list*/
+.inline-btns {
   display: flex;
   align-items: center;
   margin: 0 0 0.5em 0;
@@ -143,7 +150,7 @@ textarea {
 textarea {
   height: 100px;
 }
-
+/*--------------------- New patient fieldset ------------------------*/
 legend {
   font-size: 20px;
   color: #2d2d2d;
@@ -183,6 +190,9 @@ button {
 button:hover {
   box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
 }
+
+
+/*------------------- Patient details styles --------------------*/
 
 .patient-details-container p {
   margin: 0.3em 0;

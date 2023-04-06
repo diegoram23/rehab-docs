@@ -4,11 +4,13 @@ import useCollection from "../hooks/useCollection";
 import PatientList from "../components/PatientList";
 
 const Home = () => {
-    //sets patients equal to the data received from useCollection hook
+
+    //Custom hook to fetch all patients available
     const { documents: patients } = useCollection('patients')
 
     return (
         <div>
+            {/*Patient list will display only if patients are available in db */}
             {patients && <PatientList patients={patients} />}
         </div>
     );
