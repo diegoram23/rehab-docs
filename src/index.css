@@ -148,9 +148,13 @@ textarea {
 }
 
 textarea {
-  height: 100px;
+  height: 120px;
+  width: 300px;
+  resize: none;
 }
+
 /*--------------------- New patient fieldset ------------------------*/
+
 legend {
   font-size: 20px;
   color: #2d2d2d;
@@ -190,7 +194,6 @@ button {
 button:hover {
   box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
 }
-
 
 /*------------------- Patient details styles --------------------*/
 
@@ -273,4 +276,10 @@ justify-content: space-between;
 
 .modal-btn {
   padding: 0.5em 2.5em;
+}
+
+/*------------------------ New note page ------------------------*/
+
+.new-note {
+  padding: 0 0.75em
 }

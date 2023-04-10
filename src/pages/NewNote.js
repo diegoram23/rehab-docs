@@ -5,21 +5,34 @@ import { useState } from "react";
 const NewNote = () => {
     const { id } = useParams()
 
-    const [bedMobility, setBedMobility] = useState('')
-    const [transfers, setTransfers] = useState('')
-    const [ambulation, setAmbulation] = useState('')
-    const [assistiveDevice, setAssistiveDevice] = useState('')
-    const [distance, setDistance] = useState('')
+    //Bed mobility states
+    const [noteBedMobility, setNoteBedMobility] = useState('')
+    const [bedMobilityTextArea, setBedMobilityTextArea] = useState('')
+
+    //Transfers mobility states
+    const [noteTransfers, setNoteTransfers] = useState('')
+    const [transfersTextArea, setTransfersTextArea] = useState('')
+
+    //Ambulation mobility states
+    const [noteAmbulation, setNoteAmbulation] = useState('')
+    const [ambulationTextArea, setAmbulationTextArea] = useState('')
+    const [noteAssistiveDevice, setNoteAssistiveDevice] = useState('')
+    const [noteDistance, setNoteDistance] = useState('')
+
+    //Response and plan states
+    const [noteResponse, setNoteResponse] = useState('')
+    const [notePlan, setNotePlan] = useState('')
 
     const handleSubmitNote = (e) => {
         e.preventDefault()
     }
 
-    console.log(id)
     return (
-        <>
+        <div className="new-note">
             <form onSubmit={handleSubmitNote}>
+
                 {/*-------------- Fieldset for bed mobility ----------------*/}
+
                 <fieldset>
                     <legend>Today's bed mobility</legend>
 
@@ -28,7 +41,7 @@ const NewNote = () => {
                         id='independent-bm'
                         name="bed-mobility"
                         value='independent'
-                        onChange={(e) => setBedMobility(e.target.value)}
+                        onChange={(e) => setNoteBedMobility(e.target.value)}
                     />
                     <label htmlFor="independent-bm">Independent</label>
 
@@ -37,7 +50,7 @@ const NewNote = () => {
                         id='cga/sba-bm'
                         name="bed-mobility"
                         value='CGA/SBA'
-                        onChange={(e) => setBedMobility(e.target.value)}
+                        onChange={(e) => setNoteBedMobility(e.target.value)}
                     />
                     <label htmlFor="cga/sba-bm">CGA/SBA</label>
 
@@ -46,7 +59,7 @@ const NewNote = () => {
                         id='partial-assistance-bm'
                         name="bed-mobility"
                         value='Partial assistance'
-                        onChange={(e) => setBedMobility(e.target.value)}
+                        onChange={(e) => setNoteBedMobility(e.target.value)}
                     />
                     <label htmlFor="partial-assistance-bm">Partial Assistance</label>
 
@@ -55,9 +68,30 @@ const NewNote = () => {
                         id='max-assistance-bm'
                         name="bed-mobility"
                         value='Max assistance'
-                        onChange={(e) => setBedMobility(e.target.value)}
+                        onChange={(e) => setNoteBedMobility(e.target.value)}
                     />
                     <label htmlFor="max-assistance-bm">Max Assistance</label>
+
+                    <input
+                        type='radio'
+                        id='dnt-bm'
+                        name="bed-mobility"
+                        value='Max assistance'
+                        onChange={(e) => setNoteBedMobility(e.target.value)}
+                    />
+                    <label htmlFor="dnt-bm">DNT</label>
+
+                    <label>
+                        <textarea
+                            required
+                            type='text'
+                            placeholder="Bed mobility interventions..."
+                            value={bedMobilityTextArea}
+                            onChange={(e) => setBedMobilityTextArea(e.target.value)}
+                        >
+                        </textarea>
+                    </label>
+
                 </fieldset>
 
                 {/*------------- Fieldset for transfers ------------------*/}
@@ -70,7 +104,7 @@ const NewNote = () => {
                         id='independent-t'
                         name="transfers"
                         value='independent'
-                        onChange={(e) => setTransfers(e.target.value)}
+                        onChange={(e) => setNoteTransfers(e.target.value)}
                     />
                     <label htmlFor="independent-t">Independent</label>
 
@@ -79,7 +113,7 @@ const NewNote = () => {
                         id='cga/sba-t'
                         name="transfers"
                         value='CGA/SBA'
-                        onChange={(e) => setTransfers(e.target.value)}
+                        onChange={(e) => setNoteTransfers(e.target.value)}
                     />
                     <label htmlFor="cga/sba-t">CGA/SBA</label>
 
@@ -88,17 +122,40 @@ const NewNote = () => {
                         id='partial-assistance-t'
                         name="transfers"
                         value='Partial assistance'
-                        onChange={(e) => setTransfers(e.target.value)}
+                        onChange={(e) => setNoteTransfers(e.target.value)}
                     />
                     <label htmlFor="partial-assistance-t">Partial Assistance</label>
+
                     <input
                         type='radio'
                         id='max-assistance-t'
                         name="transfers"
                         value='Max assistance'
-                        onChange={(e) => setTransfers(e.target.value)}
+                        onChange={(e) => setNoteTransfers(e.target.value)}
                     />
                     <label htmlFor="max-assistance-t">Max Assistance</label>
+
+
+                    <input
+                        type='radio'
+                        id='dnt-t'
+                        name="transfers"
+                        value='Max assistance'
+                        onChange={(e) => setNoteTransfers(e.target.value)}
+                    />
+                    <label htmlFor="dnt-t">DNT</label>
+
+                    <label>
+                        <textarea
+                            required
+                            type='text'
+                            placeholder="Transfer interventions..."
+                            value={transfersTextArea}
+                            onChange={(e) => setTransfersTextArea(e.target.value)}
+                        >
+                        </textarea>
+                    </label>
+
 
                 </fieldset>
 
@@ -112,7 +169,7 @@ const NewNote = () => {
                         id='independent-a'
                         name="ambulation"
                         value='independent'
-                        onChange={(e) => setAmbulation(e.target.value)}
+                        onChange={(e) => setNoteAmbulation(e.target.value)}
                     />
                     <label htmlFor="independent-a">Independent</label>
 
@@ -121,7 +178,7 @@ const NewNote = () => {
                         id='cga/sba-a'
                         name="ambulation"
                         value='CGA/SBA'
-                        onChange={(e) => setAmbulation(e.target.value)}
+                        onChange={(e) => setNoteAmbulation(e.target.value)}
                     />
                     <label htmlFor="cga/sba-a">CGA/SBA</label>
 
@@ -130,7 +187,7 @@ const NewNote = () => {
                         id='partial-assistance-a'
                         name="ambulation"
                         value='Partial assistance'
-                        onChange={(e) => setAmbulation(e.target.value)}
+                        onChange={(e) => setNoteAmbulation(e.target.value)}
                     />
                     <label htmlFor="partial-assistance-a">Partial Assistance</label>
 
@@ -139,18 +196,27 @@ const NewNote = () => {
                         id='max-assistance-a'
                         name="ambulation"
                         value='Max assistance'
-                        onChange={(e) => setAmbulation(e.target.value)}
+                        onChange={(e) => setNoteAmbulation(e.target.value)}
                     />
                     <label htmlFor="max-assistance-a">Max Assistance</label>
-                    
+
+                    <input
+                        type='radio'
+                        id='dnt-a'
+                        name="ambulation"
+                        value='Max assistance'
+                        onChange={(e) => setNoteAmbulation(e.target.value)}
+                    />
+                    <label htmlFor="dnt-a">DNT</label>
 
                     {/*------------- Selects for ambulation ----------------------- */}
+
                     <label htmlFor="assistive-device">Assistive Device</label>
                     <select
                         id='assistive-device'
                         name='assistive-device'
-                        value={assistiveDevice}
-                        onChange={(e) => setAssistiveDevice(e.target.value)}
+                        value={noteAssistiveDevice}
+                        onChange={(e) => setNoteAssistiveDevice(e.target.value)}
                     >
                         <option value=''>-- Select --</option>
                         <option value='none'>None</option>
@@ -163,8 +229,8 @@ const NewNote = () => {
                     <select
                         id='distance'
                         name='distance'
-                        value={distance}
-                        onChange={(e) => setDistance(e.target.value)}
+                        value={noteDistance}
+                        onChange={(e) => setNoteDistance(e.target.value)}
                     >
                         <option value=''>-- Select --</option>
                         <option value='0 ft'>0 ft</option>
@@ -174,9 +240,54 @@ const NewNote = () => {
                         <option value='300+ ft'>300+ ft</option>
                     </select>
 
+                    <label>
+                        <textarea
+                            required
+                            type='text'
+                            placeholder="Ambulation interventions..."
+                            value={ambulationTextArea}
+                            onChange={(e) => setAmbulationTextArea(e.target.value)}
+                        >
+                        </textarea>
+                    </label>
+
                 </fieldset>
+                {/*--------------- Patient response ----------------------- */}
+
+                <fieldset>
+                    <legend>Assessment and response</legend>
+                    <label>
+                        <textarea
+                            required
+                            type='text'
+                            placeholder="Patient response..."
+                            value={noteResponse}
+                            onChange={(e) => setNoteResponse(e.target.value)}
+                        >
+                        </textarea>
+                    </label>
+                </fieldset>
+
+                {/*----------------- Note plan ----------------------- */}
+
+                <fieldset>
+                    <legend>Plan</legend>
+                    <label>
+                        <textarea
+                            required
+                            type='text'
+                            placeholder="Next session plan..."
+                            value={notePlan}
+                            onChange={(e) => setNotePlan(e.target.value)}
+                        >
+                        </textarea>
+                    </label>
+                </fieldset>
+
+                <button className="patient-form-btn">Submit note</button>
+
             </form>
-        </>
+        </div>
     );
 }
 
