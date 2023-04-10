@@ -16,25 +16,6 @@ const PatientDetails = () => {
     //Custom hook to fetch all patients available
     const { documents: patients } = useCollection('patients')
 
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     //Filters patients list to the patient selected
     const singlePatient = patients.filter(patient => patient.id === id)
     console.log('single', singlePatient)
@@ -66,8 +47,9 @@ const PatientDetails = () => {
                     <p><strong>Prior Living Situation: </strong>{patient.priorLiving}</p>
                 </section>
             )}
-            <Modal singlePatient={singlePatient} />
             <Notes path={`patients/${id}/notes`}/>
+            <Modal singlePatient={singlePatient} />
+
         </main>
     );
 }

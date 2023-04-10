@@ -211,7 +211,7 @@ button:hover {
 .patient-details-box {
 border: 1px solid #ddd;
 border-radius: 8px;
-margin: 0.8em 0.2em;
+margin: 2em 0.2em;
 }
 
 .patient-details-subtitle {
@@ -282,4 +282,27 @@ justify-content: space-between;
 
 .new-note {
   padding: 0 0.75em
+}
+
+.notes-title {
+  background-color: #ffffff;
+  color: #2d2d2d;
+  margin: 0;
+  padding: 0 0.5em;
+}
+
+.notes-date {
+  font-weight: 400;
+}
+
+.notes-header {
+  background-color: #ffffff;
+  color: #1eae98;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  font-size: 1.3rem;
+  border: none;
+  font-weight: bold;
 }
