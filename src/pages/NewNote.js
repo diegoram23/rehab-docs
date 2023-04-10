@@ -1,9 +1,13 @@
 import { useParams } from "react-router-dom";
 import { useState } from "react";
 
+import { db } from "../firebase/config";
+import { collection, addDoc } from 'firebase/firestore'
 
 const NewNote = () => {
     const { id } = useParams()
+
+    const path =`patients/${id}/notes`  
 
     //Bed mobility states
     const [noteBedMobility, setNoteBedMobility] = useState('')
@@ -23,13 +27,35 @@ const NewNote = () => {
     const [noteResponse, setNoteResponse] = useState('')
     const [notePlan, setNotePlan] = useState('')
 
-    const handleSubmitNote = (e) => {
+
+    const handleSubmitNote = async (e) => {
         e.preventDefault()
+
+        const ref = collection(db, path)
+        //creates new patient and sends values to db
+    
+        await addDoc(ref, {
+            noteBedMobility: noteBedMobility,
+            bedMobilityTextArea: bedMobilityTextArea,
+            noteTransfers: noteTransfers,
+            transfersTextArea: transfersTextArea,
+            noteAmbulation: noteAmbulation,
+            ambulationTextArea: ambulationTextArea,
+            noteAssistiveDevice: noteAssistiveDevice,
+            noteDistance: noteDistance,
+            noteResponse: noteResponse,
+            notePlan: notePlan
+        })
+
+
+
+
+        console.log('in')
     }
 
     return (
-        <div className="new-note">
-            <form onSubmit={handleSubmitNote}>
+
+            <form  className="new-note" onSubmit={handleSubmitNote}>
 
                 {/*-------------- Fieldset for bed mobility ----------------*/}
 
@@ -83,7 +109,6 @@ const NewNote = () => {
 
                     <label>
                         <textarea
-                            required
                             type='text'
                             placeholder="Bed mobility interventions..."
                             value={bedMobilityTextArea}
@@ -147,7 +172,6 @@ const NewNote = () => {
 
                     <label>
                         <textarea
-                            required
                             type='text'
                             placeholder="Transfer interventions..."
                             value={transfersTextArea}
@@ -242,7 +266,6 @@ const NewNote = () => {
 
                     <label>
                         <textarea
-                            required
                             type='text'
                             placeholder="Ambulation interventions..."
                             value={ambulationTextArea}
@@ -287,7 +310,6 @@ const NewNote = () => {
                 <button className="patient-form-btn">Submit note</button>
 
             </form>
-        </div>
     );
 }
 

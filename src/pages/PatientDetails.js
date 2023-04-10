@@ -2,16 +2,42 @@ import { useParams } from "react-router-dom";
 import useCollection from "../hooks/useCollection";
 
 import Modal from "../components/Modal";
+import Notes from "../components/Notes";
+import { db } from "../firebase/config";
+import { collection, onSnapshot, query} from 'firebase/firestore'
 
+
+
+import { useEffect } from "react";
 
 const PatientDetails = () => {
     const { id } = useParams()
-    
+
     //Custom hook to fetch all patients available
     const { documents: patients } = useCollection('patients')
 
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     //Filters patients list to the patient selected
     const singlePatient = patients.filter(patient => patient.id === id)
+    console.log('single', singlePatient)
 
     return (
 
@@ -41,6 +67,7 @@ const PatientDetails = () => {
                 </section>
             )}
             <Modal singlePatient={singlePatient} />
+            <Notes path={`patients/${id}/notes`}/>
         </main>
     );
 }
