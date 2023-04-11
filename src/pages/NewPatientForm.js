@@ -14,6 +14,7 @@ const NewPatientForm = () => {
     const [DOB, setDOB] = useState('')
     const [Diagnosis, setDiagnosis] = useState('')
     const [priorLiving, setPriorLiving] = useState('')
+    const [therapyDate, setTherapyDate] = useState('')
 
     //Fieldset states
     const [bedMobility, setBedMobility] = useState('')
@@ -32,13 +33,14 @@ const NewPatientForm = () => {
 
         const ref = collection(db, 'patients')
         //creates new patient and sends values to db
-   
+
         await addDoc(ref, {
             first: first,
             last: last,
             DOB: DOB,
             Diagnosis: Diagnosis,
             priorLiving: priorLiving,
+            therapyDate: therapyDate,
             bedMobility: bedMobility,
             transfers: transfers,
             ambulation: ambulation,
@@ -112,6 +114,16 @@ const NewPatientForm = () => {
                         onChange={(e) => setPriorLiving(e.target.value)}
                     >
                     </textarea>
+                </label>
+
+                <label>
+                    <span>Therapy start date:</span>
+                    <input
+                        required
+                        type='date'
+                        value={therapyDate}
+                        onChange={(e) => setTherapyDate(e.target.value)}
+                    />
                 </label>
 
                 {/*-------------- Fieldset for bed mobility ----------------*/}
@@ -270,10 +282,10 @@ const NewPatientForm = () => {
                     </select>
 
                 </fieldset>
-
+                
+                {/*Changes button text and disables it temporarily while pushing new patient data to db */}
                 {!isPending && <button className="patient-form-btn">Add patient</button>}
                 {isPending && <button className="patient-form-btn" disabled>Adding patient...</button>}
-                <p>{first} {last} {DOB} {Diagnosis}</p>
             </form>
         </div>
     );
