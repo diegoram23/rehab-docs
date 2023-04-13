@@ -287,6 +287,29 @@ button:hover {
   padding: 0.5em 2.5em;
 }
 
+/*------------------------ New Note Navbar ------------------------*/
+
+.new-note-nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0;
+  background-color: #5a5a5a;
+  margin-bottom: 1em;
+  border-radius: 5px;
+}
+
+.new-note-nav a {
+  font-size: 1.2rem;
+  color: #ffffff;
+}
+
+.new-note-nav a.active {
+  background-color: #1eae98;
+  border-radius: 10px;
+  padding: 0.7em 1.2em;
+}
+
 /*------------------------ Notes page styles ------------------------*/
 
 .new-note {
