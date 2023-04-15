@@ -7,7 +7,7 @@ const NewNoteLayout = () => {
         <>
             <nav className="new-note-nav">
                 <NavLink end to={`/newNote/${id}/billing`}>Billing</NavLink>
-                <NavLink end to={`/newNote/${id}`}>Response and Plan</NavLink>
+                <NavLink end to={`/newNote/${id}`}>Assessment and Plan</NavLink>
             </nav>
             <Outlet/>
         </>

@@ -82,7 +82,7 @@ header,
 .patients-box-title,
 h3,
 .delete-patient {
-  background-color: rgb(230, 227, 227);
+  background-color: rgb(236, 235, 235);
   color: #1eae98;
   margin: 0;
   padding: 0.2em 0.5em;
@@ -183,7 +183,7 @@ fieldset label {
 
 }
 
- span {
+span {
   color: #1eae98;
 }
 
@@ -294,20 +294,20 @@ button:hover {
   justify-content: space-around;
   align-items: center;
   padding: 0;
-  background-color: #5a5a5a;
-  margin-bottom: 1em;
-  border-radius: 5px;
 }
 
 .new-note-nav a {
   font-size: 1.2rem;
-  color: #ffffff;
+  color: #2d2d2d;
+  background-color: rgb(238, 297, 217);
+  padding: 0.3em 1.2em;
+  border-radius: 10px;
 }
 
 .new-note-nav a.active {
   background-color: #1eae98;
   border-radius: 10px;
-  padding: 0.7em 1.2em;
+  padding: 0.3em 1.2em;
 }
 
 /*------------------------ Notes page styles ------------------------*/
@@ -344,8 +344,50 @@ button:hover {
   margin: 2em auto;
 }
 
-.empty-notes  {
+.empty-notes {
   text-align: center;
   margin: 5em 0;
   font-size: 1.3rem;
+}
+
+/*------------------------ Billing Calculator ------------------------*/
+
+.num-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  padding: 0.5em 0 0.5em 0.5em;
+  border: 1px solid #ddd;
+}
+
+.calculator-container {
+  background-color: rgb(238, 297, 247);
+}
+
+.num-box input{
+  margin: 0;
+}
+
+.num-box label {
+  margin: 0;
+}
+
+.num-box span {
+  margin: 0;
+}
+
+.num-box textarea {
+  width: 95%;
+}
+
+.num-title {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 5%;
+  padding-bottom: 1%;
+}
+
+.num-title input {
+  width:25%;
 }

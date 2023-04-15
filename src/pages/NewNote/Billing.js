@@ -1,7 +1,11 @@
+import BillingCalculator from "../../components/BillingCalculator";
+
 const Billing = () => {
-    return ( 
-        <h2>Billing page</h2>
-     );
+    return (
+        <>
+            <BillingCalculator />
+        </>
+    );
 }
- 
+
 export default Billing;
