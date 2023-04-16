@@ -21,7 +21,7 @@ const Notes = ({ path }) => {
                 setNotes(notes)
             })
     }, [])
-
+    console.log(notes)
     return (
         <div>
             {/* If there are no notes, render no notes text else render notes */}
@@ -34,15 +34,16 @@ const Notes = ({ path }) => {
             {notes.map(note =>
                 <section className="patient-details-box" key={note.id}>
                     <h3 className="notes-date">{note.date}</h3>
+                    <p><strong>Ther-Ex: {note.therExMins} mins </strong>{note.therExText}</p>
+                    <p><strong>Gait-Trng: {note.gaitMins} mins </strong>{note.gaitText}</p>
+                    <p><strong>Ther-Act: {note.therActMins} mins </strong>{note.therActText}</p>
+                    <p><strong>Total billable time: </strong>{note.totalTime} </p>
                     <h3 className="notes-title">Bed mobility:</h3>
                     <p><strong>LOA: </strong>{note.noteBedMobility}</p>
-                    <p><strong>Treatment: </strong>{note.bedMobilityTextArea}</p>
                     <h3 className="notes-title">Transfers:</h3>
                     <p><strong>LOA: </strong>{note.noteTransfers}</p>
-                    <p><strong>Treatment: </strong>{note.transfersTextArea}</p>
                     <h3 className="notes-title">Ambulation:</h3>
                     <p><strong>LOA: </strong>{note.noteAmbulation}</p>
-                    <p><strong>Treatment: </strong>{note.ambulationTextArea}</p>
                     <p><strong>AD: </strong>{note.noteAssistiveDevice}</p>
                     <p><strong>Distance: </strong>{note.noteDistance} feet</p>
                     <h3 className="notes-title">Response:</h3>
@@ -51,8 +52,6 @@ const Notes = ({ path }) => {
                     <p>{note.notePlan}</p>
                 </section>
             )}
-
-
 
         </div>
     )
