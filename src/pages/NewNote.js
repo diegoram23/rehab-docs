@@ -79,6 +79,7 @@ const NewNote = () => {
 
                 <form className="note-box" onSubmit={handleSubmitNote}>
 
+                    {/*-------------- Label for today's date ----------------*/}
                     <label>
                         <span>Today's date</span>
                         <input
@@ -89,6 +90,7 @@ const NewNote = () => {
                         />
                     </label>
 
+                    {/*-------------- Label/input for Ther Ex billing ----------------*/}
                     <label>
                         <span className="note-subtitle">Ther Ex: Minutes <input
                             type='number'
@@ -105,6 +107,8 @@ const NewNote = () => {
                         >
                         </textarea>
                     </label>
+
+                    {/*-------------- Label/input for Ther Act billing ----------------*/}
                     <label>
                         <span className="note-subtitle">Ther Act: Minutes <input
                             type='number'
@@ -121,6 +125,8 @@ const NewNote = () => {
                         >
                         </textarea>
                     </label>
+
+                    {/*-------------- Label/input for Gait Training billing ----------------*/}
                     <label>
                         <span className="note-subtitle">Gait Training: Minutes <input
                             type='number'
@@ -139,8 +145,6 @@ const NewNote = () => {
                     </label>
 
                     <h2 className="new-note-title">Functional Mobility</h2>
-
-
 
                     {/*-------------- Fieldset for bed mobility ----------------*/}
 
@@ -332,7 +336,7 @@ const NewNote = () => {
                     {/*--------------- Patient response ----------------------- */}
 
                     <fieldset>
-                        <legend>Assessment and response</legend>
+                        <legend>Assessment</legend>
                         <label className="final-textareas">
                             <textarea
                                 required
