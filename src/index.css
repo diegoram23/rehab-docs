@@ -321,6 +321,7 @@ button:hover {
 .notes-title {
   background-color: #ffffff;
   color: #071412;
+  font-size: 1rem;
   margin: 0;
   padding: 0 0.5em;
 }
@@ -334,10 +335,10 @@ button:hover {
   color: #1eae98;
   display: flex;
   justify-content: center;
-  margin: 0;
+  margin: 0 0.5em;
   padding: 0;
+  border-bottom: 1px solid #2d2d2d;
   font-size: 1.3rem;
-  border: none;
   font-weight: bold;
 }
 
@@ -354,7 +355,7 @@ button:hover {
 
 /*------------------------ Billing Calculator ------------------------*/
 
-.num-box {
+.note-box {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -363,34 +364,44 @@ button:hover {
   border: 1px solid #ddd;
 }
 
-.calculator-container {
+.new-note-container {
   background-color: rgb(238, 297, 247);
 }
 
-.num-box input{
+.delete-note-btn {
+  background-color: #ffffff;
+  color: #1eae98;
+}
+
+.note-box input{
   margin: 0;
 }
 
-.num-box label {
+.note-box label {
   margin: 0;
 }
 
-.num-box span {
+.note-box span {
   margin: 0;
 }
 
-.num-box textarea {
+.black-text {
+  color: #2d2d2d;
+  font-weight: 600;
+}
+
+.note-box textarea {
   width: 95%;
 }
 
-.num-title {
+.note-subtitle {
   display: flex;
   justify-content: space-between;
   padding-right: 5%;
   padding-top: 3%;
 }
 
-.num-title input {
+.note-subtitle input {
   width:25%;
 }
 

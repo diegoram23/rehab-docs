@@ -21,7 +21,7 @@ const Notes = ({ path }) => {
                 setNotes(notes)
             })
     }, [])
-    console.log(notes)
+    console.log('notes', notes)
     return (
         <div>
             {/* If there are no notes, render no notes text else render notes */}
@@ -33,11 +33,14 @@ const Notes = ({ path }) => {
             {/* Maps over notes and renders them */}
             {notes.map(note =>
                 <section className="patient-details-box" key={note.id}>
-                    <h3 className="notes-date">{note.date}</h3>
-                    <p><strong>Ther-Ex: {note.therExMins} mins </strong>{note.therExText}</p>
-                    <p><strong>Gait-Trng: {note.gaitMins} mins </strong>{note.gaitText}</p>
-                    <p><strong>Ther-Act: {note.therActMins} mins </strong>{note.therActText}</p>
-                    <p><strong>Total billable time: </strong>{note.totalTime} </p>
+                    <header>
+                        <h3 className="notes-date">{note.date}</h3>
+                        <button className="delete-note-btn">Delete note</button>
+                    </header>
+                    <p><strong>Ther-Ex: <span className="black-text">{note.therExMins} mins</span> </strong>{note.therExText}</p>
+                    <p><strong>Gait Trng: <span className="black-text">{note.gaitMins} mins</span> </strong>{note.gaitText}</p>
+                    <p><strong>Ther-Act: <span className="black-text">{note.therActMins} mins</span> </strong>{note.therActText}</p>
+                    <p><strong>Total billable time: </strong><span className="black-text">{note.totalTime}</span></p>
                     <h3 className="notes-title">Bed mobility:</h3>
                     <p><strong>LOA: </strong>{note.noteBedMobility}</p>
                     <h3 className="notes-title">Transfers:</h3>
@@ -45,7 +48,7 @@ const Notes = ({ path }) => {
                     <h3 className="notes-title">Ambulation:</h3>
                     <p><strong>LOA: </strong>{note.noteAmbulation}</p>
                     <p><strong>AD: </strong>{note.noteAssistiveDevice}</p>
-                    <p><strong>Distance: </strong>{note.noteDistance} feet</p>
+                    <p><strong>Distance: </strong>{note.noteDistance}</p>
                     <h3 className="notes-title">Response:</h3>
                     <p>{note.noteResponse}</p>
                     <h3 className="notes-title">Plan:</h3>

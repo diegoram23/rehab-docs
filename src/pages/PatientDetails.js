@@ -12,7 +12,7 @@ const PatientDetails = () => {
 
     //Filters patients list to the patient selected
     const singlePatient = patients.filter(patient => patient.id === id)
-    console.log(singlePatient)
+    console.log('single', singlePatient)
     return (
 
         <main className="patient-details-container">

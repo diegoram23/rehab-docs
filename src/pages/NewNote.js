@@ -73,11 +73,11 @@ const NewNote = () => {
 
     return (
         <div>
-            <div className="calculator-container">
+            <div className="new-note-container">
 
                 <h2 className="new-note-title">Billing</h2>
 
-                <form className="num-box" onSubmit={handleSubmitNote}>
+                <form className="note-box" onSubmit={handleSubmitNote}>
 
                     <label>
                         <span>Today's date</span>
@@ -90,7 +90,7 @@ const NewNote = () => {
                     </label>
 
                     <label>
-                        <span className="num-title">Ther Ex: Minutes <input
+                        <span className="note-subtitle">Ther Ex: Minutes <input
                             type='number'
                             placeholder="0"
                             min='0'
@@ -106,7 +106,7 @@ const NewNote = () => {
                         </textarea>
                     </label>
                     <label>
-                        <span className="num-title">Ther Act: Minutes <input
+                        <span className="note-subtitle">Ther Act: Minutes <input
                             type='number'
                             placeholder="0"
                             min='0'
@@ -122,7 +122,7 @@ const NewNote = () => {
                         </textarea>
                     </label>
                     <label>
-                        <span className="num-title">Gait Training: Minutes <input
+                        <span className="note-subtitle">Gait Training: Minutes <input
                             type='number'
                             placeholder="0"
                             min='0'
