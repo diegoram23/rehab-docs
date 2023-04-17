@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 const PatientList = ({ patients }) => {
     const navigate = useNavigate()
-
+console.log(patients)
     return (
         <main className="patients-container">
             {patients.map(patient =>

@@ -4,6 +4,7 @@ import Home from './pages/Home';
 import NewNote from './pages/NewNote';
 import NewPatientForm from './pages/NewPatientForm';
 import PatientDetails from './pages/PatientDetails';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           </Route>
         </Routes>
       </HashRouter>
+      <Footer />
     </div>
   );
 }
