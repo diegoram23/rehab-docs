@@ -1,5 +1,5 @@
 import { db } from "../firebase/config";
-import { collection, getDocs, doc, deleteDoc } from 'firebase/firestore'
+import { collection, getDocs, doc, deleteDoc, orderBy, query, where } from 'firebase/firestore'
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
 
@@ -16,9 +16,11 @@ const Notes = ({ path }) => {
     
     const [selectedNote, setSelectedNote] = useState('')
 
+    const q = query(colRef, orderBy('date', 'desc'))
+    
     //Fetches notes data and pushes them into an empty array
     useEffect(() => {
-        getDocs(colRef)
+        getDocs(q)
             .then(snapshot => {
                 let notes = []
                 snapshot.docs.forEach(doc => {
@@ -28,7 +30,7 @@ const Notes = ({ path }) => {
                 setNotes(notes)
             })
     }, [])
-
+console.log(notes)
     // Toggles delete note modal onClick and sets state of note ID
     const toggleModal = (id) => {
         setDeleteNoteModal(!deleteNoteModal)

@@ -5,6 +5,7 @@ body {
   margin: 0 auto;
   color: #2d2d2d;
   font-family: 'Poppins';
+  border: 1px solid red;
 }
 
 
@@ -18,6 +19,8 @@ header,
   border-bottom: 1px solid #ddd;
   padding: 1em 0.2em;
   background-color: #ffffff;
+  margin: 0;
+  border: 1px solid yellow;
 }
 
 header span {
@@ -57,12 +60,13 @@ h2 {
 
 .patients-container {
   margin-top: 1em;
+  border: 1px solid blue
 }
 
 .patients-box {
   border: 1px solid #ddd;
   border-radius: 8px;
-  margin: 0.8em 0.2em;
+  margin: 0.8em 0;
 }
 
 .patients-box:hover {
@@ -337,7 +341,7 @@ button:hover {
 
 .notes-header {
   background-color: #ffffff;
-  color: #1eae98;
+  color: #2d2d2d;
   display: flex;
   justify-content: center;
   margin: 0 0.5em;
@@ -432,6 +436,8 @@ footer {
   display: flex;
   flex-flow: column nowrap;
   min-height: 100vh;
+  border: 1px solid black;
+  margin: 0;
 }
 
 footer h2,
@@ -467,11 +473,11 @@ footer p:hover {
   margin: 0 auto;
   padding: 1em;
   color: #1eae98;
-  }
-  
-  .notfound-link {
-    margin: 0 auto;
-    font-size: 1.3rem;
-    color: #2d2d2d;
-    font-weight: bold;
-  }
+}
+
+.notfound-link {
+  margin: 0 auto;
+  font-size: 1.3rem;
+  color: #2d2d2d;
+  font-weight: bold;
+}
