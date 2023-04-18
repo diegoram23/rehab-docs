@@ -123,7 +123,7 @@ h3,
 .history-btn:active {
   background-color: #1eae98;
   color: #eeecec;
- 
+
 }
 
 /*-------------------New patient form --------------------*/
@@ -411,7 +411,7 @@ button:hover {
   border: 1px solid #ddd;
 }
 
-.note-box input label span{
+.note-box input label span {
   margin: 0;
 }
 
@@ -457,7 +457,7 @@ footer {
   display: flex;
   flex-flow: column nowrap;
   min-height: 100vh;
- }
+}
 
 footer h2,
 footer p {
@@ -470,7 +470,8 @@ footer p {
   font-size: 14px;
 }
 
-footer p:hover, footer a:hover{
+footer p:hover,
+footer a:hover {
   color: #1eae98;
   cursor: pointer;
 }
@@ -489,6 +490,7 @@ footer a {
 }
 
 /*-------------- Not Found page styles --------------------*/
+
 .notfound-title {
   margin: 0 auto;
   padding: 1em;
@@ -500,4 +502,30 @@ footer a {
   font-size: 1.3rem;
   color: #2d2d2d;
   font-weight: bold;
+}
+
+/*-------------- Media Queries --------------------*/
+
+@media only screen and (min-width: 500px) {
+
+body {
+  font-size: 17px;
+}
+  .patients-container {
+    padding: 0 1.5em;
+  }
+
+  .main-header {
+    padding: 1.5em;
+  }
+
+  header h1 {
+    font-size: 34px;
+  }
+
+  nav a {
+    margin-right: 1.2em;
+    font-size: 17px;
+  }
+
 }
