@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/rehab-docs/static/css/main.126cf352.css",
-    "main.js": "/rehab-docs/static/js/main.70f4f4bd.js",
+    "main.css": "/rehab-docs/static/css/main.57dd9450.css",
+    "main.js": "/rehab-docs/static/js/main.7f2502b1.js",
     "index.html": "/rehab-docs/index.html",
-    "main.126cf352.css.map": "/rehab-docs/static/css/main.126cf352.css.map",
-    "main.70f4f4bd.js.map": "/rehab-docs/static/js/main.70f4f4bd.js.map"
+    "main.57dd9450.css.map": "/rehab-docs/static/css/main.57dd9450.css.map",
+    "main.7f2502b1.js.map": "/rehab-docs/static/js/main.7f2502b1.js.map"
   },
   "entrypoints": [
-    "static/css/main.126cf352.css",
-    "static/js/main.70f4f4bd.js"
+    "static/css/main.57dd9450.css",
+    "static/js/main.7f2502b1.js"
   ]
 }
