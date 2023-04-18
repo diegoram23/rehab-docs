@@ -2,10 +2,9 @@
 
 body {
   max-width: 400px;
-  margin: 0 auto;
+  margin: 0 ;
   color: #2d2d2d;
   font-family: 'Poppins';
-  border: 1px solid red;
 }
 
 
@@ -20,7 +19,6 @@ header,
   padding: 1em 0.2em;
   background-color: #ffffff;
   margin: 0;
-  border: 1px solid yellow;
 }
 
 header span {
@@ -60,7 +58,6 @@ h2 {
 
 .patients-container {
   margin-top: 1em;
-  border: 1px solid blue
 }
 
 .patients-box {
@@ -109,11 +106,23 @@ h3,
   margin-right: 0.5em;
 }
 
-.all-notes-btn {
+.new-note-btn:active {
+  color: #1eae98;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+}
+
+.history-btn {
   color: #1eae98;
   background-color: #eeecec;
   border: 1px solid #ddd;
   margin-left: auto;
+}
+
+.history-btn:active {
+  background-color: #1eae98;
+  color: #eeecec;
+ 
 }
 
 /*-------------------New patient form --------------------*/
@@ -126,6 +135,12 @@ h3,
 .patient-form-btn {
   margin: 2.5em 0;
   padding: 12px 25px;
+}
+
+.patient-form-btn:active {
+  color: #1eae98;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
 }
 
 label {
@@ -243,7 +258,13 @@ button:hover {
 
 .delete-btn {
   display: block;
-  margin: 0 auto;
+  margin: 0 auto 3em auto;
+}
+
+.delete-btn:active {
+  color: #1eae98;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
 }
 
 /*------------------------ Modal ------------------------*/
@@ -292,10 +313,6 @@ button:hover {
 
 .modal-btn {
   padding: 0.5em 2.5em;
-}
-
-.delete-btn {
-  margin-bottom: 3em;
 }
 
 /*------------------------ New Note Navbar ------------------------*/
@@ -356,6 +373,11 @@ button:hover {
   margin: 2em auto;
 }
 
+.submit-note-btn:active {
+  color: #1eae98;
+  background-color: #ffffff;
+}
+
 .empty-notes {
   text-align: center;
   margin: 5em 0;
@@ -382,15 +404,13 @@ button:hover {
   color: #1eae98;
 }
 
-.note-box input {
-  margin: 0;
+.delete-note-btn:active {
+  color: #1eae98;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
 }
 
-.note-box label {
-  margin: 0;
-}
-
-.note-box span {
+.note-box input label span{
   margin: 0;
 }
 

@@ -18,7 +18,7 @@ const PatientList = ({ patients }) => {
                         <p><strong>Dx: </strong>{patient.Diagnosis}</p>
 
                         {/*Redirects user to details page or new note pageof patient chosen */}
-                        <button onClick={() => navigate(`/patient/${patient.id}`)} className="all-notes-btn">History</button>
+                        <button onClick={() => navigate(`/patient/${patient.id}`)} className="history-btn">History</button>
                         <button onClick={() => navigate(`/newNote/${patient.id}`)} className="new-note-btn">New note</button>
                     </div>
                 </section>
