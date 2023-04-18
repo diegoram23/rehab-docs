@@ -120,7 +120,7 @@ h3,
 }
 
 .patient-form-btn {
-  margin-top: 4em;
+  margin: 2.5em 0;
   padding: 12px 25px;
 }
 
@@ -290,6 +290,10 @@ button:hover {
   padding: 0.5em 2.5em;
 }
 
+.delete-btn {
+  margin-bottom: 3em;
+}
+
 /*------------------------ New Note Navbar ------------------------*/
 
 .new-note-nav {
@@ -420,7 +424,7 @@ button:hover {
 
 footer {
   background-color: #414141;
-  margin-top: 2em;
+  margin: auto 0 0 0;
   padding: 1em;
 }
 
@@ -457,3 +461,17 @@ footer p:hover {
   text-align: center;
   font-size: 12px;
 }
+
+/*-------------- Not Found page styles --------------------*/
+.notfound-title {
+  margin: 0 auto;
+  padding: 1em;
+  color: #1eae98;
+  }
+  
+  .notfound-link {
+    margin: 0 auto;
+    font-size: 1.3rem;
+    color: #2d2d2d;
+    font-weight: bold;
+  }
