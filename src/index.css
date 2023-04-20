@@ -59,6 +59,7 @@ h2 {
 
 .patients-container {
   margin-top: 1em;
+  padding: 0 0.5em;
 }
 
 .patients-box {
@@ -374,6 +375,10 @@ button:hover {
   margin: 2em auto;
 }
 
+fieldset {
+  background-color: #ffffff;
+}
+
 .submit-note-btn:active {
   color: #1eae98;
   background-color: #ffffff;
@@ -504,13 +509,16 @@ footer a {
   font-weight: bold;
 }
 
-/*-------------- Media Queries --------------------*/
+/*------------------- Min width 500px media queries --------------------------*/
 
 @media only screen and (min-width: 500px) {
 
-body {
-  font-size: 17px;
-}
+  body {
+    font-size: 17px;
+    margin: 0 auto;
+    min-width: 100vw;
+  }
+
   .patients-container {
     padding: 0 1.5em;
   }
@@ -528,4 +536,118 @@ body {
     font-size: 17px;
   }
 
+  .patient-details-box p {
+    font-size: 16px;
+  }
+
+  .patient-details-container {
+    padding: 0 1em;
+    margin: 0 auto;
+  }
+
+  .notes-title {
+    font-size: 18px;
+  }
+
+  .patient-details-subtitle {
+    font-size: 19px;
+  }
+
+  button {
+    font-size: 16px
+  }
+}
+
+/*------------------- Min width 750px media queries --------------------------*/
+@media only screen and (min-width: 750px) {
+
+  body {
+    font-size: 18px;
+  }
+
+  .patients-box {
+    border: 1px solid green;
+    min-height: 150px;
+  }
+
+  .app {
+    max-width: 750px;
+    margin: 0 auto;
+  }
+
+  header h1 {
+    font-size: 36px;
+  }
+
+  nav a {
+    font-size: 18px;
+  }
+
+  header,
+  .patients-box-title,
+  h3,
+  .delete-patient {
+    padding: 0.35em 0.5em;
+  }
+
+  .patients-box p {
+    margin: 0;
+    padding: 0.45em;
+  }
+
+  .notes-title {
+    font-size: 19px;
+  }
+  .patient-details-box p {
+    font-size: 18px;
+  }
+
+
+  .patient-details-subtitle {
+    font-size: 21px;
+  }
+
+  button {
+    font-size: 17px;
+  }
+
+  .patient-form {
+    max-width: 750px;
+    font-size: 19px;
+  }
+  
+  .patient-form-btn {
+    margin: 1.5em 0;
+    padding: 15px 40px;
+    font-size: 19px;
+  }
+  
+  .patient-form h2 {
+    font-size: 32px;
+  }
+  
+  input,
+  textarea {
+    font-size: 18px;
+  }
+  
+  textarea {
+    height: 150px;
+    resize: none;
+  }  
+  
+  fieldset {
+    color: #1eae98;
+    border: 1px solid #1eae98;
+    margin-bottom: 15px;
+  }
+  
+  fieldset input {
+    margin-right: 1.5em;
+    margin-bottom: 15px;
+  }
+  
+  select {
+    font-size: 16px;
+  }
 }

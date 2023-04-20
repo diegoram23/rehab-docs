@@ -50,7 +50,7 @@ console.log(notes)
     }
 
     return (
-        <div>
+        <div className="notes-container">
             {/* If there are no notes, render no notes text else render notes */}
             {notes.length === 0 ? (
                 <h4 className="empty-notes">There are no notes...</h4>
