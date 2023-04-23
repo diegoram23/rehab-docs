@@ -30,7 +30,7 @@ const Notes = ({ path }) => {
                 setNotes(notes)
             })
     }, [])
-console.log(notes)
+
     // Toggles delete note modal onClick and sets state of note ID
     const toggleModal = (id) => {
         setDeleteNoteModal(!deleteNoteModal)

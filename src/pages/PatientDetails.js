@@ -12,7 +12,7 @@ const PatientDetails = () => {
 
     //Filters patients list to the patient selected
     const singlePatient = patients.filter(patient => patient.id === id)
-    
+
     return (
 
         <main className="patient-details-container">
@@ -32,6 +32,7 @@ const PatientDetails = () => {
                         <p><strong>Diagnosis: </strong>{patient.Diagnosis}</p>
                         <p><strong>DOB: </strong>{patient.DOB}</p>
                     </div>
+                    <p><strong>Therapy start date: </strong>{patient.therapyDate}</p>
 
                     {/*Patients previous mobility level */}
                     <p><strong>Bed mobility: </strong>{patient.bedMobility}</p>
@@ -40,7 +41,7 @@ const PatientDetails = () => {
                     <p><strong>Prior Living Situation: </strong>{patient.priorLiving}</p>
                 </section>
             )}
-            <Notes path={`patients/${id}/notes`}/>
+            <Notes path={`patients/${id}/notes`} />
             <Modal singlePatient={singlePatient} />
 
         </main>

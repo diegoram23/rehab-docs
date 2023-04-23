@@ -41,6 +41,7 @@ nav a {
 
 nav a:hover {
   box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
+  color: #1eae98;
 }
 
 nav a.active {
@@ -108,7 +109,8 @@ h3,
   margin-right: 0.5em;
 }
 
-.new-note-btn:active {
+.new-note-btn:active,
+.new-note-btn:hover {
   color: #1eae98;
   background-color: #ffffff;
   border: 1px solid #ddd;
@@ -121,7 +123,8 @@ h3,
   margin-left: auto;
 }
 
-.history-btn:active {
+.history-btn:active,
+.history-btn:hover {
   background-color: #1eae98;
   color: #eeecec;
 
@@ -139,7 +142,8 @@ h3,
   padding: 12px 25px;
 }
 
-.patient-form-btn:active {
+.patient-form-btn:active,
+.patient-form-btn:hover {
   color: #1eae98;
   background-color: #ffffff;
   border: 1px solid #ddd;
@@ -263,7 +267,8 @@ button:hover {
   margin: 0 auto 3em auto;
 }
 
-.delete-btn:active {
+.delete-btn:active,
+.delete-btn:hover {
   color: #1eae98;
   background-color: #ffffff;
   border: 1px solid #ddd;
@@ -334,7 +339,8 @@ button:hover {
   border-radius: 10px;
 }
 
-.new-note-nav a.active {
+.new-note-nav a:active,
+.new-note-nav a:hover {
   background-color: #1eae98;
   border-radius: 10px;
   padding: 0.3em 1.2em;
@@ -379,7 +385,8 @@ fieldset {
   background-color: #ffffff;
 }
 
-.submit-note-btn:active {
+.submit-note-btn:active,
+.submit-note-btn:hover {
   color: #1eae98;
   background-color: #ffffff;
 }
@@ -410,7 +417,8 @@ fieldset {
   color: #1eae98;
 }
 
-.delete-note-btn:active {
+.delete-note-btn:active,
+.delete-note-btn:hover {
   color: #1eae98;
   background-color: #ffffff;
   border: 1px solid #ddd;
@@ -598,6 +606,7 @@ footer a {
   .notes-title {
     font-size: 19px;
   }
+
   .patient-details-box p {
     font-size: 18px;
   }
@@ -615,38 +624,38 @@ footer a {
     max-width: 750px;
     font-size: 19px;
   }
-  
+
   .patient-form-btn {
     margin: 1.5em 0;
     padding: 15px 40px;
     font-size: 19px;
   }
-  
+
   .patient-form h2 {
     font-size: 32px;
   }
-  
+
   input,
   textarea {
     font-size: 18px;
   }
-  
+
   textarea {
     height: 150px;
     resize: none;
-  }  
-  
+  }
+
   fieldset {
     color: #1eae98;
     border: 1px solid #1eae98;
     margin-bottom: 15px;
   }
-  
+
   fieldset input {
     margin-right: 1.5em;
     margin-bottom: 15px;
   }
-  
+
   select {
     font-size: 16px;
   }
